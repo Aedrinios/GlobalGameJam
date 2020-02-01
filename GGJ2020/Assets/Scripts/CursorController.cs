@@ -70,8 +70,8 @@ public class CursorController : MonoBehaviour
             grabbedObject.transform.parent = transform;
             grabbedObject.GetComponent<Rigidbody2D>().gravityScale = 0;
             grabbedObject.GetComponent<Collider2D>().enabled = false;
+            hasGrabbed = true;
         }
-        hasGrabbed = true;
     }
 
     private void ReleaseObject()

@@ -14,11 +14,11 @@ public class MonsterSystem : MonoBehaviour
 
     public UnityEvent Attack;
     public UnityEvent Dead;
+    public GameObject nearMonster;
 
     [HideInInspector] public float pvMax; 
     bool isMove = true;
     float chronoAttack = 0; 
-    GameObject nearMonster;
     MonsterStats monsterStats;
 
     private void Start()
@@ -67,6 +67,7 @@ public class MonsterSystem : MonoBehaviour
             MonsterSystem otherMonster = nearMonster.GetComponent<MonsterSystem>();            
             if (side != otherMonster.side)
             {
+                Debug.Log("ORAORAOORA");
                 chronoAttack += Time.deltaTime; 
                 if (chronoAttack >= delayAttack)
                 {
