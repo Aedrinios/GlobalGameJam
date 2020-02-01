@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13733563}
   - component: {fileID: 13733564}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,9 +285,9 @@ GameObject:
   - component: {fileID: 529188638}
   - component: {fileID: 529188637}
   - component: {fileID: 529188636}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Character Zone J1
-  m_TagString: CharacterZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 621026155}
   - component: {fileID: 621026156}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007365833}
   - component: {fileID: 2007365834}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

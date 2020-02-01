@@ -26,7 +26,7 @@ public class DragObject : MonoBehaviour
 
     private void Start()
     {
-        layerMask = 1 << 12;
+        layerMask = 1 << 13;
         mainCamera = Camera.main;
         rb2D = GetComponent<Rigidbody2D>();
     }
