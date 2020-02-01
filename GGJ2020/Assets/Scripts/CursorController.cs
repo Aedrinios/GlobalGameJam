@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class CursorController : MonoBehaviour
 {
-    public Enum.Player player = Enum.Player.Player_1; 
+    public Enum.Player player = Enum.Player.Player_1;
+    public Sprite spriteClosed;
+    public Sprite spriteOpen;
+    public CharacterZone charZonePlayer1;
+    public CharacterZone charZonePlayer2;
+
     public float speed = 10;
     public float minX;
     public float minY;
@@ -12,8 +17,7 @@ public class CursorController : MonoBehaviour
     public float maxY;
 
     private GameObject grabbedObject;
-    private CharacterZone charZone;
-
+    private SpriteRenderer spriteRenderer;
     private int layerMaskGrab;
     private int layerMaskRelease;
     private bool hasGrabbed;
@@ -23,7 +27,7 @@ public class CursorController : MonoBehaviour
         hasGrabbed = false;
         layerMaskGrab = 1 << 12;
         layerMaskRelease = 1 << 13;
-        charZone = FindObjectOfType<CharacterZone>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -39,10 +43,12 @@ public class CursorController : MonoBehaviour
             }
             if (Input.GetButton("Grab1") && !hasGrabbed)
             {
+                spriteRenderer.sprite = spriteClosed;
                 GrabObject();
             }
             if(Input.GetButtonUp("Grab1") && hasGrabbed)
             {
+                spriteRenderer.sprite = spriteOpen;
                 ReleaseObject();
             }
         }
@@ -91,9 +97,11 @@ public class CursorController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.forward, Mathf.Infinity, layerMaskRelease);
         if (hit.collider != null)
         {
-            charZone.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
+            if(player == Enum.Player.Player_1)
+                charZonePlayer1.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
+            else if (player == Enum.Player.Player_2)
+                charZonePlayer2.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
         }
-
     }
 
     private void ActivateLever()
@@ -101,7 +109,10 @@ public class CursorController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.forward, Mathf.Infinity);
         if (hit.collider != null && hit.collider.CompareTag("Lever"))
         {
-            charZone.CreateCreature();
+            if (player == Enum.Player.Player_1)
+                charZonePlayer1.CreateCreature();
+            else if (player == Enum.Player.Player_2)
+                charZonePlayer2.CreateCreature();
         }
     }
 }

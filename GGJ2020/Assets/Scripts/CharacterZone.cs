@@ -58,6 +58,7 @@ public class CharacterZone : MonoBehaviour
         rb2D.velocity = Vector2.zero;
         rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
         go.GetComponent<Collider2D>().enabled = false;
+        Debug.Log(placementPosition);
         go.transform.position = placementPosition;
         if(player == Enum.Player.Player_2)
             go.transform.eulerAngles = new Vector3(0, -180, 0);
