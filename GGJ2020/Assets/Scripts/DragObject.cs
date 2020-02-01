@@ -41,7 +41,14 @@ public class DragObject : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = partBody.spritePart;
-        spriteRenderer.sortingOrder = 5;
+        if(partBody.typePart == Enum.Type.Body)
+        {
+            spriteRenderer.sortingOrder = 0;
+        }
+        if (partBody.typePart == Enum.Type.Head && partBody.typePart == Enum.Type.Member)
+        {
+            spriteRenderer.sortingOrder = 1;
+        }
         gameObject.name = partBody.spritePart.name; 
     }
 

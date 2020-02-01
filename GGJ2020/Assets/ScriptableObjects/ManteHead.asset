@@ -17,5 +17,5 @@ MonoBehaviour:
   bonusStrength: 0
   bonusConstitution: 0
   bonusAgility: 1
-  gestation: 1
+  gestation: 10
   description: "T\xEAte agile"
