@@ -26,8 +26,10 @@ public class PartSystem : MonoBehaviour
             bonusConstitution = partBody.bonusConstitution;
             bonusAgility = partBody.bonusAgility;
 
-            gameObject.name = partBody.name; 
+            gameObject.name = partBody.name;
+            gameObject.tag = "PartBody"; 
             typePart = partBody.typePart;
+
             SpriteRenderer renderer = GetComponent<SpriteRenderer>();
             renderer.sprite = partBody.spritePart;
             if (typePart == Enum.Type.Head) renderer.sortingOrder = 4;

@@ -24,7 +24,6 @@ public class SpawnerSystem : MonoBehaviour
             GameObject newMonster = Instantiate(monsterPlayer, transform.position, transform.rotation) as GameObject;
             newMonster.GetComponent<MonsterSystem>().player = player;
         }
-
         else
         {
             Debug.Log("Monster not created");

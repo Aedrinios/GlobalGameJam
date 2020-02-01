@@ -447,7 +447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdbe9ba5d5e6494ab1f46355412f740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPlayer: {fileID: 0}
+  monsterPlayer: {fileID: 3048750258355614419, guid: 2d959135828711043b252b22cc3c632a,
+    type: 3}
   SpawnButton: 97
   player: 0
 --- !u!1 &422374091
@@ -631,7 +632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdbe9ba5d5e6494ab1f46355412f740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPlayer: {fileID: 0}
+  monsterPlayer: {fileID: 3048750258355614419, guid: 2d959135828711043b252b22cc3c632a,
+    type: 3}
   SpawnButton: 101
   player: 1
 --- !u!1 &776995267
