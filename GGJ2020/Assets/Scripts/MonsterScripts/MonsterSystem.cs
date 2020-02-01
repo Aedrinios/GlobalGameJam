@@ -24,6 +24,7 @@ public class MonsterSystem : MonoBehaviour
     private void Start()
     {
         monsterStats = GetComponent<MonsterStats>();
+        monsterStats.UpgradeStats(); 
         life *= monsterStats.constitution;
         speedMove *= 0.1f * monsterStats.agility;
         powerAttack *= monsterStats.strength;
@@ -67,7 +68,7 @@ public class MonsterSystem : MonoBehaviour
             MonsterSystem otherMonster = nearMonster.GetComponent<MonsterSystem>();            
             if (side != otherMonster.side)
             {
-                Debug.Log("ORAORAOORA");
+                //Debug.Log("ORAORAOORA");
                 chronoAttack += Time.deltaTime; 
                 if (chronoAttack >= delayAttack)
                 {
