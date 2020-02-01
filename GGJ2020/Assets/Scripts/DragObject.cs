@@ -20,10 +20,13 @@ public class DragObject : MonoBehaviour
 
     public float tolerance;
     public float grabForce;
+
     private float distanceWithMouse;
+    private int layerMask;
 
     private void Start()
     {
+        layerMask = 1 << 12;
         mainCamera = Camera.main;
         rb2D = GetComponent<Rigidbody2D>();
     }
@@ -44,7 +47,6 @@ public class DragObject : MonoBehaviour
 
     private void FollowMouse()
     {
-
         convertTransform = transform.position;
         mouseDirection = screenMousePosition - convertTransform;
         distanceWithMouse = mouseDirection.magnitude;
@@ -58,5 +60,17 @@ public class DragObject : MonoBehaviour
         {
             rb2D.drag = 1 + (1/distanceWithMouse);
         }
+        Debug.DrawRay(mainCamera.transform.position, convertMousePosition);
+    }
+
+    private void OnMouseUp()
+    {
+        Debug.Log(convertMousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(convertMousePosition, Vector3.forward, Mathf.Infinity, layerMask);
+        if(hit.collider != null)
+        {
+            hit.collider.gameObject.GetComponent<CharacterZone>().SetPart(gameObject, rb2D);
+        }
+
     }
 }
