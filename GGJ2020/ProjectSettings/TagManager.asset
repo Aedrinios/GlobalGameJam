@@ -9,6 +9,7 @@ TagManager:
   - Bridge
   - Ground
   - PickUp
+  - Lever
   layers:
   - Default
   - TransparentFX

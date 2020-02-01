@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterZone : MonoBehaviour
 {
+    public Enum.Player player = Enum.Player.Player_1;
     public Vector3 rescale;
 
     [SerializeField] private Vector3 placementPosition = Vector3.zero;
@@ -35,5 +36,10 @@ public class CharacterZone : MonoBehaviour
         rb2D.freezeRotation = true;
         go.GetComponent<Collider2D>().enabled = false;
         go.transform.position = placementPosition;
+    }
+
+    public void CreateCreature()
+    {
+
     }
 }

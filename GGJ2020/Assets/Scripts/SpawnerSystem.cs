@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnerSystem : MonoBehaviour
 {
-    public GameObject monsterSpawn; 
+    private GameObject monsterSpawn; 
 
     public KeyCode SpawnButton;
-    public Enum.Side sideSpawn = Enum.Side.Left;
+    public Enum.Player player = Enum.Player.Player_1;
 
     private void Update()
     {
@@ -19,7 +19,14 @@ public class SpawnerSystem : MonoBehaviour
 
     public void SpawnNewMonster()
     {
-        GameObject newMonster = Instantiate(monsterSpawn, transform.position, transform.rotation) as GameObject;
-        newMonster.GetComponent<MonsterSystem>().side = sideSpawn; 
+        if(monsterSpawn != null)
+        {
+            GameObject newMonster = Instantiate(monsterSpawn, transform.position, transform.rotation) as GameObject;
+            newMonster.GetComponent<MonsterSystem>().player = player;
+        }
+        else
+        {
+            Debug.Log("Monster not created");
+        }
     }
 }

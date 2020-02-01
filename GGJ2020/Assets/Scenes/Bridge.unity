@@ -304,6 +304,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 422374092}
     m_Modifications:
+    - target: {fileID: 4460766336405792728, guid: 0d1d3416269353f46b9e5f7567164ed0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Lever
+      objectReference: {fileID: 0}
     - target: {fileID: 6074504836875901188, guid: 0d1d3416269353f46b9e5f7567164ed0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -364,7 +369,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Atelier J1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1185273884, guid: 0d1d3416269353f46b9e5f7567164ed0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0d1d3416269353f46b9e5f7567164ed0, type: 3}
 --- !u!4 &380993881 stripped
 Transform:
@@ -415,10 +421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdbe9ba5d5e6494ab1f46355412f740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterSpawn: {fileID: 3048750258355614419, guid: 2d959135828711043b252b22cc3c632a,
-    type: 3}
   SpawnButton: 97
-  sideSpawn: 1
+  player: 0
 --- !u!1 &422374091
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,10 +604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdbe9ba5d5e6494ab1f46355412f740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterSpawn: {fileID: 3048750258355614419, guid: 2d959135828711043b252b22cc3c632a,
-    type: 3}
   SpawnButton: 101
-  sideSpawn: 0
+  player: 0
 --- !u!1 &776995267
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +640,6 @@ MonoBehaviour:
   speed: 15
   maxX: 17.55
   maxY: 10.7
-  grabbedObject: {fileID: 0}
 --- !u!212 &776995269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -876,7 +877,6 @@ MonoBehaviour:
   speed: 15
   maxX: 17.55
   maxY: 10.7
-  grabbedObject: {fileID: 0}
 --- !u!1 &1853211054
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MonsterSystem : MonoBehaviour
 {
-    public Enum.Side side = Enum.Side.Left;
+    public Enum.Player player = Enum.Player.Player_1;
     public float speedMove = 4;
     public int life = 10;
     public int powerAttack = 1;
@@ -66,7 +66,7 @@ public class MonsterSystem : MonoBehaviour
         if (nearMonster != null)
         {
             MonsterSystem otherMonster = nearMonster.GetComponent<MonsterSystem>();            
-            if (side != otherMonster.side)
+            if (player != otherMonster.player)
             {
                 //Debug.Log("ORAORAOORA");
                 chronoAttack += Time.deltaTime; 

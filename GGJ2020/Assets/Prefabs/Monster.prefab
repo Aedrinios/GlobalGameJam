@@ -611,8 +611,7 @@ PrefabInstance:
         type: 3}
       propertyPath: partBody
       value: 
-      objectReference: {fileID: 11400000, guid: 0813ec58a932dbe418eb69081e316fce,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8388211867204222708, guid: aaf76307b984034458a64f01b5b6be2b,
         type: 3}
       propertyPath: m_Name
@@ -692,8 +691,7 @@ PrefabInstance:
         type: 3}
       propertyPath: partBody
       value: 
-      objectReference: {fileID: 11400000, guid: 52264e841db0ae646bf49393411c1734,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8388211867204222708, guid: aaf76307b984034458a64f01b5b6be2b,
         type: 3}
       propertyPath: m_Name
@@ -773,8 +771,7 @@ PrefabInstance:
         type: 3}
       propertyPath: partBody
       value: 
-      objectReference: {fileID: 11400000, guid: bec998d1e706c594f8680c9acea25846,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8388211867204222708, guid: aaf76307b984034458a64f01b5b6be2b,
         type: 3}
       propertyPath: m_Name
@@ -854,8 +851,7 @@ PrefabInstance:
         type: 3}
       propertyPath: partBody
       value: 
-      objectReference: {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8388211867204222708, guid: aaf76307b984034458a64f01b5b6be2b,
         type: 3}
       propertyPath: m_Name
