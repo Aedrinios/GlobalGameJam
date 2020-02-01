@@ -68,7 +68,6 @@ public class MonsterSystem : MonoBehaviour
             MonsterSystem otherMonster = nearMonster.GetComponent<MonsterSystem>();            
             if (player != otherMonster.player)
             {
-                //Debug.Log("ORAORAOORA");
                 chronoAttack += Time.deltaTime; 
                 if (chronoAttack >= delayAttack)
                 {

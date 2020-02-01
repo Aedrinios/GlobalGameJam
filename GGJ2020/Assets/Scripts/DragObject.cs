@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DragObject : MonoBehaviour
 {
-
+    public PartBody partBody;
     #region Components
     private Camera mainCamera;
     private Rigidbody2D rb2D;

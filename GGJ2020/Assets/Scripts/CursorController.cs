@@ -83,14 +83,15 @@ public class CursorController : MonoBehaviour
 
     private void ReleaseObject()
     {
+        grabbedObject.transform.parent = null;
+        grabbedObject.GetComponent<Collider2D>().enabled = true;
+        hasGrabbed = false;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.forward, Mathf.Infinity, layerMaskRelease);
         if (hit.collider != null)
         {
             charZone.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
         }
-        grabbedObject.transform.parent = null;
-        grabbedObject.GetComponent<Collider2D>().enabled = true;
-        hasGrabbed = false;
+
     }
 
     private void ActivateLever()

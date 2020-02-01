@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 7171322637469121880}
   - component: {fileID: 4777048294438687658}
   m_Layer: 0
-  m_Name: Arms
+  m_Name: CatArms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ef78c9120fac95841971080e46571631, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -335,7 +335,7 @@ SpriteRenderer:
   m_Size: {x: 2.048, y: 2.048}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4777048294438687658
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cff3802e0f17b468278fa8034f9823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partBody: {fileID: 0}
+  partBody: {fileID: 11400000, guid: 0813ec58a932dbe418eb69081e316fce, type: 2}
   typePart: 2
   bonusStrength: 0
   bonusConstitution: 0
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 7146013265587275147}
   - component: {fileID: 3687055245608256366}
   m_Layer: 9
-  m_Name: Monster
+  m_Name: Monster Test
   m_TagString: Monster
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 2137272693553101942}
   - component: {fileID: 5112605107010074451}
   m_Layer: 0
-  m_Name: Legs
+  m_Name: CatLegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,7 +576,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ea013c56c45f5e745a14a36b15204fb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -584,7 +584,7 @@ SpriteRenderer:
   m_Size: {x: 2.048, y: 2.048}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5112605107010074451
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cff3802e0f17b468278fa8034f9823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partBody: {fileID: 0}
+  partBody: {fileID: 11400000, guid: bec998d1e706c594f8680c9acea25846, type: 2}
   typePart: 2
   bonusStrength: 0
   bonusConstitution: 0
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 611150904216776459}
   - component: {fileID: 5728526123297671988}
   m_Layer: 0
-  m_Name: Head
+  m_Name: CatHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -673,7 +673,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f3513b982081ebf4091dbd02b91a47bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -681,7 +681,7 @@ SpriteRenderer:
   m_Size: {x: 2.048, y: 2.048}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5728526123297671988
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cff3802e0f17b468278fa8034f9823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partBody: {fileID: 0}
+  partBody: {fileID: 11400000, guid: 52264e841db0ae646bf49393411c1734, type: 2}
   typePart: 1
   bonusStrength: 0
   bonusConstitution: 0
@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 4135346025081388724}
   - component: {fileID: 5708452352042911634}
   m_Layer: 0
-  m_Name: Body
+  m_Name: CatBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -908,7 +908,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9d37d5f6bcc519e4893d377ff3fe1aac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -916,7 +916,7 @@ SpriteRenderer:
   m_Size: {x: 2.048, y: 2.048}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5708452352042911634
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cff3802e0f17b468278fa8034f9823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partBody: {fileID: 0}
+  partBody: {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb, type: 2}
   typePart: 0
   bonusStrength: 1
   bonusConstitution: 1
