@@ -10,7 +10,7 @@ public class MonsterStats : MonoBehaviour
 
     PartSystem[] allPartSystem; 
 
-    private void Awake()
+    public void UpgradeStats()
     {
         allPartSystem = GetComponentsInChildren<PartSystem>();
 
@@ -20,7 +20,6 @@ public class MonsterStats : MonoBehaviour
             constitution += allPartSystem[i].bonusConstitution;
             agility += allPartSystem[i].bonusAgility;
         }
-
     }
 
 
