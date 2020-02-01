@@ -9,8 +9,9 @@ public class MonsterSystem : MonoBehaviour
     public int life = 10;
     public int powerAttack = 1;
     public float delayAttack = 0.2f;
-    public GameObject[] member; 
+    public GameObject[] member;
 
+    [HideInInspector] public float pvMax; 
     bool isMove = true;
     float chronoAttack = 0; 
     GameObject nearMonster;
@@ -22,6 +23,7 @@ public class MonsterSystem : MonoBehaviour
         life *= monsterStats.constitution;
         speedMove *= 0.1f * monsterStats.agility;
         powerAttack *= monsterStats.strength;
+        pvMax = life; 
     }
 
     private void Update()
