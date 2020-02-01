@@ -28,9 +28,7 @@ public class CharacterZone : MonoBehaviour
     public void SetPart(GameObject go, Rigidbody2D rb2D)
     {
         if ((go.name.ToUpper().Contains("HEAD") || go.name.ToUpper().Contains("TETE")) && !hasHead)
-        {
-            Debug.Log("LA TEUTÉ");
-            hasHead = true;
+        {            hasHead = true;
             head = go.GetComponent<DragObject>().partBody;
         }
         else if ((go.name.ToUpper().Contains("ARM") || go.name.ToUpper().Contains("PATTES_H")) && !hasHead)
@@ -53,7 +51,6 @@ public class CharacterZone : MonoBehaviour
         else
             return;
 
-        Debug.Log("hello");
         go.transform.localScale = rescale;
         go.transform.rotation = Quaternion.Euler(Vector3.zero);
         rb2D.gravityScale = 0;
