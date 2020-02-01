@@ -9,6 +9,7 @@ public class DragObject : MonoBehaviour
     #region Components
     private Camera mainCamera;
     private Rigidbody2D rb2D;
+    private Collider2D col;
     #endregion
 
     #region Vectors and conversion
@@ -18,8 +19,8 @@ public class DragObject : MonoBehaviour
     private Vector2 convertTransform;
     #endregion
 
-    public float tolerance;
-    public float grabForce;
+    public static float tolerance;
+    public static float grabForce;
 
     private float distanceWithMouse;
     private int layerMask;
@@ -29,15 +30,18 @@ public class DragObject : MonoBehaviour
         layerMask = 1 << 13;
         mainCamera = Camera.main;
         rb2D = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
     }
 
     private void OnMouseDown()
     {
         rb2D.gravityScale = 0;
+        
     }
 
     private void OnMouseDrag()
     {
+        col.enabled = false;
         convertMousePosition = Input.mousePosition;
         convertMousePosition.z = 10;
         convertMousePosition = mainCamera.ScreenToWorldPoint(convertMousePosition);
@@ -60,17 +64,18 @@ public class DragObject : MonoBehaviour
         {
             rb2D.drag = 1 + (1/distanceWithMouse);
         }
-        Debug.DrawRay(mainCamera.transform.position, convertMousePosition);
     }
 
     private void OnMouseUp()
     {
-        Debug.Log(convertMousePosition);
         RaycastHit2D hit = Physics2D.Raycast(convertMousePosition, Vector3.forward, Mathf.Infinity, layerMask);
         if(hit.collider != null)
         {
             hit.collider.gameObject.GetComponent<CharacterZone>().SetPart(gameObject, rb2D);
         }
-
+        else
+        {
+            col.enabled = true;
+        }
     }
 }

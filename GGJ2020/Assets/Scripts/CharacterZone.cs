@@ -4,35 +4,36 @@ using UnityEngine;
 
 public class CharacterZone : MonoBehaviour
 {
-    private Transform head;
-    private Transform body;
-    private Transform feet;
+    public Vector3 rescale;
+
+    [SerializeField] private Vector3 placementPosition = Vector3.zero;
+    private bool hasHead;
+    private bool hasBody;
+    private bool hasFeet;
 
     private void Start()
     {
-        head = transform.GetChild(0);
-        body = transform.GetChild(1);
-        feet = transform.GetChild(2);
+
     }
 
     public void SetPart(GameObject go, Rigidbody2D rb2D)
     {
-        if (go.name == "head")
-            go.transform.position = head.position;
+        if (go.name.ToUpper().Contains("HEAD") && !hasHead)
+            hasHead = true;
 
-        else if (go.name == "body")
-            go.transform.position = body.position;
+        else if (go.name.ToUpper().Contains("BODY") && !hasBody)
+            hasBody = true;
 
-        else if (go.name == "feet")
-            go.transform.position = feet.position;
+        else if (go.name.ToUpper().Contains("FEET") && !hasFeet)
+            hasFeet = true;
         else
             return;
-
+        go.transform.localScale = rescale;
         go.transform.rotation = Quaternion.Euler(Vector3.zero);
         rb2D.gravityScale = 0;
         rb2D.velocity = Vector2.zero;
         rb2D.freezeRotation = true;
         go.GetComponent<Collider2D>().enabled = false;
-
+        go.transform.position = placementPosition;
     }
 }
