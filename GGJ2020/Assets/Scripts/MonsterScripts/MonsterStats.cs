@@ -7,6 +7,7 @@ public class MonsterStats : MonoBehaviour
     public int strength = 10;
     public int constitution = 10;
     public int agility = 10;
+    public int gestation = 0;
 
     PartSystem[] allPartSystem; 
 

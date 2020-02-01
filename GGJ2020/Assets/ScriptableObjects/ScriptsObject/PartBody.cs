@@ -13,6 +13,7 @@ public class PartBody : ScriptableObject
 	public int bonusStrength = 0;
 	public int bonusConstitution = 0;
 	public int bonusAgility = 0;
+    public int gestation = 0;
 
 	public string description; 
 }
