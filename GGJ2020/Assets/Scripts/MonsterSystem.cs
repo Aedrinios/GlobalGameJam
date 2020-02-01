@@ -13,15 +13,27 @@ public class MonsterSystem : MonoBehaviour
 
     bool isMove = true;
     float chronoAttack = 0; 
-    GameObject nearMonster; 
+    GameObject nearMonster;
+    MonsterStats monsterStats;
+
+    private void Start()
+    {
+        monsterStats = GetComponent<MonsterStats>();
+        life *= monsterStats.constitution;
+        speedMove *= 0.1f * monsterStats.agility;
+        powerAttack *= monsterStats.strength;
+    }
 
     private void Update()
-    {
-        if (isMove) transform.Translate(Vector3.right * speedMove * Time.deltaTime);        
+    {  
         if (life <= 0) Die();
-
         if (nearMonster != null) Attack(); 
         else isMove = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (isMove) transform.Translate(Vector3.right * speedMove * Time.deltaTime);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -52,7 +64,7 @@ public class MonsterSystem : MonoBehaviour
                 chronoAttack += Time.deltaTime; 
                 if (chronoAttack >= delayAttack)
                 {
-                    otherMonster.life -= powerAttack;
+                    otherMonster.life -= powerAttack; 
                     chronoAttack = 0; 
                 }                        
             }
