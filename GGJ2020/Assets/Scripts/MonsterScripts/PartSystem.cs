@@ -18,7 +18,7 @@ public class PartSystem : MonoBehaviour
         InitiatePartBody();
     }
 
-    void InitiatePartBody()
+    public void InitiatePartBody()
     {
         if (partBody != null)
         {
@@ -27,7 +27,6 @@ public class PartSystem : MonoBehaviour
             bonusAgility = partBody.bonusAgility;
 
             gameObject.name = partBody.name;
-            gameObject.tag = "PartBody"; 
             typePart = partBody.typePart;
 
             SpriteRenderer renderer = GetComponent<SpriteRenderer>();
