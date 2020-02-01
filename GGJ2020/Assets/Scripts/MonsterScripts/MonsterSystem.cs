@@ -10,11 +10,12 @@ public class MonsterSystem : MonoBehaviour
     public int life = 10;
     public int powerAttack = 1;
     public float delayAttack = 0.2f;
+    public GameObject PickUp; 
 
     public UnityEvent Attack;
     public UnityEvent Dead;
-    public GameObject nearMonster;
 
+    [HideInInspector] public GameObject nearMonster;
     [HideInInspector] public float pvMax; 
     bool isMove = true;
     float chronoAttack = 0; 
@@ -89,8 +90,22 @@ public class MonsterSystem : MonoBehaviour
     {
         PartSystem[] part = GetComponentsInChildren<PartSystem>();
 
+        for (int i = 0; i < part.Length; i++)
+        {
+            GameObject newObject = Instantiate(PickUp, transform.position, transform.rotation) as GameObject;
+            newObject.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z); 
+            newObject.AddComponent<PartSystem>();
+            PartSystem newPart = newObject.GetComponentInChildren<PartSystem>();
+            newPart.partBody = part[i].partBody;
+            newPart.InitiatePartBody();
+            newPart.gameObject.AddComponent<PolygonCollider2D>();
+
+            float random_x = Random.Range(-1f, 1f); 
+            Vector2 randomDir = new Vector2(random_x, 0.5f); 
+
+            newPart.GetComponent<Rigidbody2D>().AddForce(randomDir * 300); 
+        } 
         
-        //Instantiate()
 
 
 
