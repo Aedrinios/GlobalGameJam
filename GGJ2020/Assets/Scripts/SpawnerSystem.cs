@@ -22,8 +22,6 @@ public class SpawnerSystem : MonoBehaviour
     {
         if(monsterPlayer != null)
         {
-            Debug.Log(monsterPlayer.GetComponent<MonsterStats>().gestation);
-
             newMonster = Instantiate(monsterPlayer, transform.position, transform.rotation) as GameObject;
 
             newMonster.SetActive(false);

@@ -117,5 +117,9 @@ public class CharacterZone : MonoBehaviour
         {
             Destroy(feet);
         }
+        monsterPrefab.transform.GetChild(0).GetComponent<PartSystem>().partBody = null;
+        monsterPrefab.transform.GetChild(1).GetComponent<PartSystem>().partBody = null;
+        monsterPrefab.transform.GetChild(2).GetComponent<PartSystem>().partBody = null;
+        monsterPrefab.transform.GetChild(3).GetComponent<PartSystem>().partBody = null;
     }
 }
