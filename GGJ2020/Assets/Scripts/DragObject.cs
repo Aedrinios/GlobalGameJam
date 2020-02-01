@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class DragObject : MonoBehaviour
 {
     public PartBody partBody;
@@ -10,6 +11,7 @@ public class DragObject : MonoBehaviour
     private Camera mainCamera;
     private Rigidbody2D rb2D;
     private Collider2D col;
+    private SpriteRenderer spriteRenderer; 
     #endregion
 
     #region Vectors and conversion
@@ -27,16 +29,25 @@ public class DragObject : MonoBehaviour
 
     private void Start()
     {
-        layerMask = 1 << 13;
+        InitialiseDrag();
+        layerMask = 1 << 13;        
         mainCamera = Camera.main;
         rb2D = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        gameObject.AddComponent<PolygonCollider2D>(); 
+    }
+
+    void InitialiseDrag()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = partBody.spritePart;
+        spriteRenderer.sortingOrder = 5;
+        gameObject.name = partBody.spritePart.name; 
     }
 
     private void OnMouseDown()
     {
-        rb2D.gravityScale = 0;
-        
+        rb2D.gravityScale = 0;        
     }
 
     private void OnMouseDrag()
