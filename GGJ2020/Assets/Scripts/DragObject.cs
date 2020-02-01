@@ -19,8 +19,8 @@ public class DragObject : MonoBehaviour
     private Vector2 convertTransform;
     #endregion
 
-    public static float tolerance;
-    public static float grabForce;
+    public static float tolerance = 5;
+    public static float grabForce = 100;
 
     private float distanceWithMouse;
     private int layerMask;
