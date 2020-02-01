@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 
 public class MonsterSystem : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class MonsterSystem : MonoBehaviour
     public int powerAttack = 1;
     public float delayAttack = 0.2f;
     public GameObject[] member;
+
+    public UnityEvent Attack;
+    public UnityEvent Dead;
 
     [HideInInspector] public float pvMax; 
     bool isMove = true;
@@ -29,7 +33,7 @@ public class MonsterSystem : MonoBehaviour
     private void Update()
     {  
         if (life <= 0) Die();
-        if (nearMonster != null) Attack(); 
+        if (nearMonster != null) Attacking(); 
         else isMove = true;
     }
 
@@ -56,7 +60,7 @@ public class MonsterSystem : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attacking()
     {
         if (nearMonster != null)
         {
@@ -66,6 +70,7 @@ public class MonsterSystem : MonoBehaviour
                 chronoAttack += Time.deltaTime; 
                 if (chronoAttack >= delayAttack)
                 {
+                    Attack.Invoke(); 
                     otherMonster.life -= powerAttack; 
                     chronoAttack = 0; 
                 }                        
@@ -75,6 +80,7 @@ public class MonsterSystem : MonoBehaviour
 
     public void Die()
     {
+        Dead.Invoke(); 
         for (int i = 0; i < member.Length; i++)
         {
             Instantiate(member[i], transform.position, transform.rotation);

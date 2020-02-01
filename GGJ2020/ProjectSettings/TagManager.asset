@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Monster
   - CharacterZone
+  - Bridge
+  - Ground
+  - PickUp
   layers:
   - Default
   - TransparentFX
