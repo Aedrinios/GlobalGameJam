@@ -10,7 +10,6 @@ TagManager:
   - Ground
   - PickUp
   - Lever
-  - PartBody
   layers:
   - Default
   - TransparentFX

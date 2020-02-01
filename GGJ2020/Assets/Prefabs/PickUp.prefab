@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7100347052422153486}
   m_Layer: 10
   m_Name: PickUp
-  m_TagString: PartBody
+  m_TagString: PickUp
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d212c47f39c8a094fa574fdab4909834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 5
   Gibs:
     m_PersistentCalls:
       m_Calls:
@@ -59,7 +60,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  originalRotation: 0
 --- !u!50 &7100347052422153486
 Rigidbody2D:
   serializedVersion: 4
