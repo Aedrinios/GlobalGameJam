@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterZone : MonoBehaviour
 {
+    public Enum.Player player;
     public SpawnerSystem spawnPlayer;
     public GameObject monsterPrefab;
     public Vector3 rescale;
@@ -26,7 +27,6 @@ public class CharacterZone : MonoBehaviour
 
     public void SetPart(GameObject go, Rigidbody2D rb2D)
     {
-        Debug.Log("MOHAMMED AVDOL");
         if ((go.name.ToUpper().Contains("HEAD") || go.name.ToUpper().Contains("TETE")) && !hasHead)
         {
             hasHead = true;
@@ -59,6 +59,8 @@ public class CharacterZone : MonoBehaviour
         rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
         go.GetComponent<Collider2D>().enabled = false;
         go.transform.position = placementPosition;
+        if(player == Enum.Player.Player_2)
+            go.transform.eulerAngles = new Vector3(0, -180, 0);
     }
 
     public void CreateCreature()
