@@ -652,6 +652,7 @@ MonoBehaviour:
   strength: 10
   constitution: 10
   agility: 10
+  gestation: 10
 --- !u!114 &3687055245608256366
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,4 +17,5 @@ MonoBehaviour:
   bonusStrength: 0
   bonusConstitution: 0
   bonusAgility: 1
+  gestation: 1
   description: Membres agiles

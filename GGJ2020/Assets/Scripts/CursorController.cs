@@ -6,8 +6,10 @@ public class CursorController : MonoBehaviour
 {
     public Enum.Player player = Enum.Player.Player_1; 
     public float speed = 10;
-    public float maxX = 17.8f;
-    public float maxY = 10.7f;
+    public float minX;
+    public float minY;
+    public float maxX;
+    public float maxY;
 
     private GameObject grabbedObject;
     private CharacterZone charZone;
@@ -63,8 +65,8 @@ public class CursorController : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 clampPosition = transform.position;
-        clampPosition.x = Mathf.Clamp(clampPosition.x, -maxX, maxX);
-        clampPosition.y = Mathf.Clamp(clampPosition.y, -maxY, maxY);
+        clampPosition.x = Mathf.Clamp(clampPosition.x, minX, maxX);
+        clampPosition.y = Mathf.Clamp(clampPosition.y, minY, maxY);
         transform.position = clampPosition; 
     }
 

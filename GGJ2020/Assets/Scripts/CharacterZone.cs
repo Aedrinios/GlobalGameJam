@@ -73,6 +73,7 @@ public class CharacterZone : MonoBehaviour
         monsterPrefab.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = spriteFeet;
 
         spawnPlayer.SetMonster(monsterPrefab);
+        spawnPlayer.SpawnNewMonster();
         Reset();
     }
 

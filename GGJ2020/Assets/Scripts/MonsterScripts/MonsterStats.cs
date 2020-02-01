@@ -20,6 +20,7 @@ public class MonsterStats : MonoBehaviour
             strength += allPartSystem[i].bonusStrength;
             constitution += allPartSystem[i].bonusConstitution;
             agility += allPartSystem[i].bonusAgility;
+            gestation += allPartSystem[i].gestation;
         }
     }
 

@@ -17,4 +17,5 @@ MonoBehaviour:
   bonusStrength: 1
   bonusConstitution: 1
   bonusAgility: 2
+  gestation: 1
   description: Corps agile

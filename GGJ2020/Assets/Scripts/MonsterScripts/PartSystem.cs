@@ -12,6 +12,7 @@ public class PartSystem : MonoBehaviour
     [HideInInspector] public int bonusStrength;
     [HideInInspector] public int bonusConstitution;
     [HideInInspector] public int bonusAgility;
+    [HideInInspector] public int gestation;
 
     private void OnEnable()
     {
@@ -25,7 +26,7 @@ public class PartSystem : MonoBehaviour
             bonusStrength = partBody.bonusStrength;
             bonusConstitution = partBody.bonusConstitution;
             bonusAgility = partBody.bonusAgility;
-
+            gestation = partBody.gestation;
             gameObject.name = partBody.name;
             typePart = partBody.typePart;
 
