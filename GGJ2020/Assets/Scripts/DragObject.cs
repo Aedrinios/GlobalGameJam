@@ -33,8 +33,8 @@ public class DragObject : MonoBehaviour
         layerMask = 1 << 13;        
         mainCamera = Camera.main;
         rb2D = GetComponent<Rigidbody2D>();
+        gameObject.AddComponent<PolygonCollider2D>();
         col = GetComponent<Collider2D>();
-        gameObject.AddComponent<PolygonCollider2D>(); 
     }
 
     void InitialiseDrag()
