@@ -16,13 +16,13 @@ public class CharacterZone : MonoBehaviour
     private bool hasBody;
     private bool hasFeet;
 
-    private GameObject head;
+    public GameObject head;
     private Sprite spriteHead;
-    private GameObject arm;
+    public GameObject arm;
     private Sprite spriteArm;
-    private GameObject body;
+    public GameObject body;
     private Sprite spriteBody;
-    private GameObject feet;
+    public GameObject feet;
     private Sprite spriteFeet;
 
     public void SetPart(GameObject go, Rigidbody2D rb2D)
@@ -66,14 +66,33 @@ public class CharacterZone : MonoBehaviour
 
     public void CreateCreature()
     {
-        monsterPrefab.transform.GetChild(0).GetComponent<PartSystem>().partBody = head.GetComponent<DragObject>().partBody;
-        monsterPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = spriteHead;
-        monsterPrefab.transform.GetChild(1).GetComponent<PartSystem>().partBody = arm.GetComponent<DragObject>().partBody;
-        monsterPrefab.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = spriteArm;
-        monsterPrefab.transform.GetChild(2).GetComponent<PartSystem>().partBody = body.GetComponent<DragObject>().partBody;
-        monsterPrefab.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = spriteBody;
-        monsterPrefab.transform.GetChild(3).GetComponent<PartSystem>().partBody = feet.GetComponent<DragObject>().partBody;
-        monsterPrefab.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = spriteFeet;
+        if (body != null)
+        {
+            monsterPrefab.transform.GetChild(2).GetComponent<PartSystem>().partBody = body.GetComponent<DragObject>().partBody;
+            monsterPrefab.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = spriteBody;
+        }
+        else
+        {
+            return;
+        }
+
+        if (head != null)
+        {
+            monsterPrefab.transform.GetChild(0).GetComponent<PartSystem>().partBody = head.GetComponent<DragObject>().partBody;
+            monsterPrefab.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = spriteHead;
+        }
+
+        if(arm != null)
+        {
+            monsterPrefab.transform.GetChild(1).GetComponent<PartSystem>().partBody = arm.GetComponent<DragObject>().partBody;
+            monsterPrefab.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = spriteArm;
+        }
+
+        if(feet != null)
+        {
+            monsterPrefab.transform.GetChild(3).GetComponent<PartSystem>().partBody = feet.GetComponent<DragObject>().partBody;
+            monsterPrefab.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = spriteFeet;
+        }
 
         spawnPlayer.SetMonster(monsterPrefab);
         spawnPlayer.SpawnNewMonster();
