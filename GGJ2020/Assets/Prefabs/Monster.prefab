@@ -355,6 +355,7 @@ MonoBehaviour:
   bonusStrength: 1
   bonusConstitution: 1
   bonusAgility: 2
+  gestation: 0
 --- !u!1 &2063197609722902377
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +453,7 @@ MonoBehaviour:
   bonusStrength: 0
   bonusConstitution: 0
   bonusAgility: 1
+  gestation: 0
 --- !u!1 &2631349530537012500
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +551,7 @@ MonoBehaviour:
   bonusStrength: 0
   bonusConstitution: 0
   bonusAgility: 1
+  gestation: 0
 --- !u!1 &3048750258355614419
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +655,7 @@ MonoBehaviour:
   strength: 10
   constitution: 10
   agility: 10
-  gestation: 10
+  gestation: 0
 --- !u!114 &3687055245608256366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,6 +801,7 @@ MonoBehaviour:
   bonusStrength: 0
   bonusConstitution: 0
   bonusAgility: 1
+  gestation: 0
 --- !u!1 &7236925346878663933
 GameObject:
   m_ObjectHideFlags: 0
