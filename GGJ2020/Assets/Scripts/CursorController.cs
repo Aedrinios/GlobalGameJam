@@ -37,18 +37,11 @@ public class CursorController : MonoBehaviour
     {
         if (player == Enum.Player.Player_1)
         {
-            if (!isMouse)
-            {
-                float h = Input.GetAxis("HorizontalJ1");
-                float v = Input.GetAxis("VerticalJ1");
+            float h = Input.GetAxis("HorizontalJ1");
+            float v = Input.GetAxis("VerticalJ1");
 
-                transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
-            }
-            else
-            {
-                Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-                transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            }
+            transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
+            
             if (Input.GetButtonDown("Grab1"))
             {
                 ActivateLever();
@@ -60,8 +53,6 @@ public class CursorController : MonoBehaviour
             }
             if(Input.GetButtonUp("Grab1") && hasGrabbed)
             {
-                Debug.Log("LOL");
-
                 spriteRenderer.sprite = spriteOpen;
                 ReleaseObject();
             }
@@ -87,7 +78,6 @@ public class CursorController : MonoBehaviour
             }
             if (Input.GetButtonUp("Grab2") && hasGrabbed)
             {
-                Debug.Log("LOL");
                 ReleaseObject();
             }
         }
