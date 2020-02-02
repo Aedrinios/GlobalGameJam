@@ -34,8 +34,8 @@ public class CursorController : MonoBehaviour
     {
         if (player == Enum.Player.Player_1)
         {
-            float h = Input.GetAxis("Horizontal");
-            float v = Input.GetAxis("Vertical");
+            float h = Input.GetAxis("HorizontalJ1");
+            float v = Input.GetAxis("VerticalJ1");
             transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
             if (Input.GetButtonDown("Grab1"))
             {
@@ -48,14 +48,16 @@ public class CursorController : MonoBehaviour
             }
             if(Input.GetButtonUp("Grab1") && hasGrabbed)
             {
+                Debug.Log("LOL");
+
                 spriteRenderer.sprite = spriteOpen;
                 ReleaseObject();
             }
         }
-        if (player == Enum.Player.Player_2)
+        else if (player == Enum.Player.Player_2)
         {
-            float h = Input.GetAxis("Horizontal2");
-            float v = Input.GetAxis("Vertical2");
+            float h = Input.GetAxis("HorizontalJ2");
+            float v = Input.GetAxis("VerticalJ2");
             transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
             if (Input.GetButton("Grab2") && !hasGrabbed)
             {
@@ -63,6 +65,7 @@ public class CursorController : MonoBehaviour
             }
             if (Input.GetButtonUp("Grab2") && hasGrabbed)
             {
+                Debug.Log("LOL");
                 ReleaseObject();
             }
         }
