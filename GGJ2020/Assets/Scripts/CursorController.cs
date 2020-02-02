@@ -41,6 +41,7 @@ public class CursorController : MonoBehaviour
         {
             float h = Input.GetAxis("HorizontalJ1");
             float v = Input.GetAxis("VerticalJ1");
+
             transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
             
             if (Input.GetButtonDown("Grab1"))
@@ -58,15 +59,8 @@ public class CursorController : MonoBehaviour
                 ReleaseObject();
             }
         }
-
         else if (player == Enum.Player.Player_2)
         {
-            // controle manette
-            float h = Input.GetAxis("HorizontalJ2");
-            float v = Input.GetAxis("VerticalJ2");
-            transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
-
-            /*
             if (!isMouse)
             {
                 float h = Input.GetAxis("HorizontalJ2");
@@ -80,20 +74,16 @@ public class CursorController : MonoBehaviour
                 float mouseY = Input.GetAxis("Mouse Y");
                 transform.position += new Vector3(mouseX, mouseY, 0) * speed * Time.deltaTime; ;
             }
-            */
-
             if (Input.GetButtonDown("Grab2"))
             {
                 ActivateLever();
             }
             if (Input.GetButton("Grab2") && !hasGrabbed)
             {
-                spriteRenderer.sprite = spriteClosed;
                 GrabObject();
             }
             if (Input.GetButtonUp("Grab2") && hasGrabbed)
             {
-                spriteRenderer.sprite = spriteOpen;
                 ReleaseObject();
             }
         }
