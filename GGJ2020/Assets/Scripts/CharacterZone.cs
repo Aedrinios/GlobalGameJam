@@ -9,7 +9,6 @@ public class CharacterZone : MonoBehaviour
     public GameObject monsterPrefab;
     public Vector3 rescale;
 
-
     [SerializeField] private Vector3 placementPosition = Vector3.zero;
     private bool hasHead;
     private bool hasArm;
