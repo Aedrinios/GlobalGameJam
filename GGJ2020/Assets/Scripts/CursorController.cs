@@ -70,8 +70,8 @@ public class CursorController : MonoBehaviour
         {
             if (!isMouse)
             {
-                float h = Input.GetAxis("HorizontalJ1");
-                float v = Input.GetAxis("VerticalJ1");
+                float h = Input.GetAxis("HorizontalJ2");
+                float v = Input.GetAxis("VerticalJ2");
 
                 transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
             }
