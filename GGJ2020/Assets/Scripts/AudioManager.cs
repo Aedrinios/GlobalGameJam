@@ -19,4 +19,16 @@ public class AudioManager : MonoBehaviour
         source.PlayOneShot(sound[i]);
         volume += modifVolumeNext; 
     }
+
+    public void PlayMusic()
+    {
+        GameObject newSound = new GameObject("newSound");
+        newSound.AddComponent<AudioSource>();
+        AudioSource source = newSound.GetComponent<AudioSource>();
+        source.loop = true;
+        source.volume = volume;
+        int i = Random.Range(0, sound.Length);
+        source.PlayOneShot(sound[i]);
+        volume += modifVolumeNext;
+    }
 }
