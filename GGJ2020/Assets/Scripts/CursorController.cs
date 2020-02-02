@@ -5,6 +5,7 @@ using UnityEngine;
 public class CursorController : MonoBehaviour
 {
     public Enum.Player player = Enum.Player.Player_1;
+    public bool isMouse = false;
     public Sprite spriteClosed;
     public Sprite spriteOpen;
     public CharacterZone charZonePlayer;
@@ -18,6 +19,7 @@ public class CursorController : MonoBehaviour
 
     private GameObject grabbedObject;
     private SpriteRenderer spriteRenderer;
+    private Camera cam;
     private int layerMaskGrab;
     private int layerMaskRelease;
     private bool hasGrabbed;
@@ -28,15 +30,25 @@ public class CursorController : MonoBehaviour
         layerMaskGrab = 1 << 12;
         layerMaskRelease = 1 << 13;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        cam = Camera.main;
     }
 
     private void FixedUpdate()
     {
         if (player == Enum.Player.Player_1)
         {
-            float h = Input.GetAxis("HorizontalJ1");
-            float v = Input.GetAxis("VerticalJ1");
-            transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
+            if (!isMouse)
+            {
+                float h = Input.GetAxis("HorizontalJ1");
+                float v = Input.GetAxis("VerticalJ1");
+
+                transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            }
             if (Input.GetButtonDown("Grab1"))
             {
                 ActivateLever();
@@ -56,9 +68,19 @@ public class CursorController : MonoBehaviour
         }
         else if (player == Enum.Player.Player_2)
         {
-            float h = Input.GetAxis("HorizontalJ2");
-            float v = Input.GetAxis("VerticalJ2");
-            transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
+            if (!isMouse)
+            {
+                float h = Input.GetAxis("HorizontalJ1");
+                float v = Input.GetAxis("VerticalJ1");
+
+                transform.position += new Vector3(h, v, 0) * speed * Time.deltaTime;
+            }
+            else
+            {
+                float mouseX = Input.GetAxis("Mouse X");
+                float mouseY = Input.GetAxis("Mouse Y");
+                transform.position += new Vector3(mouseX, mouseY, 0) * speed * Time.deltaTime; ;
+            }
             if (Input.GetButton("Grab2") && !hasGrabbed)
             {
                 GrabObject();
