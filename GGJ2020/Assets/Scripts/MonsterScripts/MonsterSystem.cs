@@ -12,6 +12,7 @@ public class MonsterSystem : MonoBehaviour
     public float delayAttack = 0.2f;
     public GameObject PickUp; 
     public GameObject hitParticle; 
+    public GameObject deadParticle; 
 
     public UnityEvent Attack;
     public UnityEvent Dead;
@@ -95,6 +96,7 @@ public class MonsterSystem : MonoBehaviour
         for (int i = 0; i < part.Length; i++)
         {
             GameObject newObject = Instantiate(PickUp, transform.position, transform.rotation) as GameObject;
+            Instantiate(deadParticle, newObject.transform.position, Quaternion.Euler(-90,0, Random.Range(0f, 360f)), newObject.transform);
             newObject.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z); 
             newObject.AddComponent<PartSystem>();
             PartSystem newPart = newObject.GetComponentInChildren<PartSystem>();

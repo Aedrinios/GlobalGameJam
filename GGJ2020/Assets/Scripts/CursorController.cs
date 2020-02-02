@@ -7,8 +7,8 @@ public class CursorController : MonoBehaviour
     public Enum.Player player = Enum.Player.Player_1;
     public Sprite spriteClosed;
     public Sprite spriteOpen;
-    public CharacterZone charZonePlayer1;
-    public CharacterZone charZonePlayer2;
+    public CharacterZone charZonePlayer;
+    public GameObject grabParticle;
 
     public float speed = 10;
     public float minX;
@@ -82,6 +82,8 @@ public class CursorController : MonoBehaviour
         if(hit.collider != null)
         {
             grabbedObject = hit.collider.gameObject;
+            Instantiate(grabParticle, grabbedObject.transform.position, grabbedObject.transform.rotation, grabbedObject.transform);
+
             grabbedObject.transform.parent = transform;
             grabbedObject.GetComponent<Rigidbody2D>().gravityScale = 0;
             grabbedObject.GetComponent<Collider2D>().enabled = false;
@@ -97,10 +99,7 @@ public class CursorController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.forward, Mathf.Infinity, layerMaskRelease);
         if (hit.collider != null)
         {
-            if(player == Enum.Player.Player_1)
-                charZonePlayer1.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
-            else if (player == Enum.Player.Player_2)
-                charZonePlayer2.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
+            charZonePlayer.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
         }
     }
 
@@ -108,11 +107,7 @@ public class CursorController : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.forward, Mathf.Infinity);
         if (hit.collider != null && hit.collider.CompareTag("Lever"))
-        {
-            if (player == Enum.Player.Player_1)
-                charZonePlayer1.CreateCreature();
-            else if (player == Enum.Player.Player_2)
-                charZonePlayer2.CreateCreature();
-        }
+
+        charZonePlayer.CreateCreature();
     }
 }

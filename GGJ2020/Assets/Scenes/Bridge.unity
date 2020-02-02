@@ -738,8 +738,9 @@ MonoBehaviour:
   player: 1
   spriteClosed: {fileID: 21300000, guid: e431dbaa3f7c0c944bb04f79a1cfe660, type: 3}
   spriteOpen: {fileID: 21300000, guid: 77ec54be119e13c4d8d463ac642b8009, type: 3}
-  charZonePlayer1: {fileID: 0}
-  charZonePlayer2: {fileID: 0}
+  charZonePlayer: {fileID: 173611394}
+  grabParticle: {fileID: 2462045763441574653, guid: 683c760c477088c4383e0e6d48563a09,
+    type: 3}
   speed: 15
   minX: 0
   minY: -9
@@ -813,18 +814,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1577333758317050030}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1283620776 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7277562352247843849, guid: 0d1d3416269353f46b9e5f7567164ed0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1577333758317050030}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f134e8cacf33bd49bb31c024e3f757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1746660209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,8 +1008,9 @@ MonoBehaviour:
   player: 0
   spriteClosed: {fileID: 21300000, guid: 41355ffe1821ef44ebfb348497a0f47c, type: 3}
   spriteOpen: {fileID: 21300000, guid: 0bd367272ec0b094e839981fb12ed365, type: 3}
-  charZonePlayer1: {fileID: 1283620776}
-  charZonePlayer2: {fileID: 173611394}
+  charZonePlayer: {fileID: 173611394}
+  grabParticle: {fileID: 2462045763441574653, guid: 683c760c477088c4383e0e6d48563a09,
+    type: 3}
   speed: 15
   minX: -17.75
   minY: -9
