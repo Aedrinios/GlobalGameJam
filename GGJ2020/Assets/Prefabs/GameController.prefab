@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3649229485655638463}
   - component: {fileID: 3649229485655638456}
+  - component: {fileID: 6238503297812059253}
   m_Layer: 0
   m_Name: LootManager
   m_TagString: Untagged
@@ -75,16 +76,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayLoot: 1.5
-  stockPart_P1:
-  - {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb, type: 2}
-  - {fileID: 11400000, guid: 0813ec58a932dbe418eb69081e316fce, type: 2}
-  - {fileID: 11400000, guid: c42668bff4107a840998a1c4808a05a8, type: 2}
-  - {fileID: 11400000, guid: 136d6591c78a9fe4396bcdaa9332873e, type: 2}
-  stockPart_P2:
-  - {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb, type: 2}
-  - {fileID: 11400000, guid: 0813ec58a932dbe418eb69081e316fce, type: 2}
-  - {fileID: 11400000, guid: c42668bff4107a840998a1c4808a05a8, type: 2}
-  - {fileID: 11400000, guid: 136d6591c78a9fe4396bcdaa9332873e, type: 2}
+  stockPart_P1: []
+  stockPart_P2: []
   partCraft: {fileID: 70845131901474531, guid: 93e049ca89c0ea44d99244b000f7c71a, type: 3}
   spawnPointP1: {x: -15.5, y: -2.7, z: 0}
   spawnPointP2: {x: 2, y: -2.7, z: 0}
+--- !u!114 &6238503297812059253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3649229485655638462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6459800ba762eb74eb62bd00163baeaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 2.5
+  partBody:
+  - {fileID: 11400000, guid: 50b46e7cabaf3444391f72f243709146, type: 2}
+  - {fileID: 11400000, guid: c59b2dd7ae67bd345919d9a3f01e5c76, type: 2}
+  - {fileID: 11400000, guid: 99409c8f62a3ab348a6e34e1f3e2c9c4, type: 2}
+  - {fileID: 11400000, guid: 4236d0ae6adbfb041b3578a07a65d41f, type: 2}
+  - {fileID: 11400000, guid: 0813ec58a932dbe418eb69081e316fce, type: 2}
+  - {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb, type: 2}
+  - {fileID: 11400000, guid: 52264e841db0ae646bf49393411c1734, type: 2}
+  - {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb, type: 2}
+  - {fileID: 11400000, guid: e86c59ff75c16574286fb70b50ff05d9, type: 2}
+  - {fileID: 11400000, guid: 1f084e101e2ce9a4b88ba1428ed56278, type: 2}
+  - {fileID: 11400000, guid: 136d6591c78a9fe4396bcdaa9332873e, type: 2}
+  - {fileID: 11400000, guid: c42668bff4107a840998a1c4808a05a8, type: 2}
+  - {fileID: 11400000, guid: d725b53b15f77f64b8702427fc40d11f, type: 2}
+  - {fileID: 11400000, guid: d4b7ba7e55cf106498931e2907378be7, type: 2}
+  - {fileID: 11400000, guid: a2b55470d20fb6b4cb76e87ab7da6cd7, type: 2}
+  - {fileID: 11400000, guid: 3a91ce42ff079014cb9aed971ca4310f, type: 2}
+  - {fileID: 11400000, guid: c74c76f2f95c93645b9c67fc334e7916, type: 2}
+  - {fileID: 11400000, guid: 3de08482ff7f5d34cbdcd804ea701623, type: 2}
+  - {fileID: 11400000, guid: 55118780a1e21f744852082565c5bcb5, type: 2}
+  - {fileID: 11400000, guid: 9a1f4d5974d4b2548bff7af1ce613356, type: 2}
