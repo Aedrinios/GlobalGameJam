@@ -11,6 +11,7 @@ public class MonsterSystem : MonoBehaviour
     public int powerAttack = 1;
     public float delayAttack = 0.2f;
     public GameObject PickUp; 
+    public GameObject hitParticle; 
 
     public UnityEvent Attack;
     public UnityEvent Dead;
@@ -65,13 +66,14 @@ public class MonsterSystem : MonoBehaviour
     {
         if (nearMonster != null)
         {
-            MonsterSystem otherMonster = nearMonster.GetComponent<MonsterSystem>();            
+            MonsterSystem otherMonster = nearMonster.GetComponent<MonsterSystem>();
             if (player != otherMonster.player)
             {
                 chronoAttack += Time.deltaTime; 
                 if (chronoAttack >= delayAttack)
                 {
-                    Attack.Invoke(); 
+                    Attack.Invoke();
+                    Instantiate(hitParticle, nearMonster.transform.GetChild(2).position, nearMonster.transform.rotation);
                     otherMonster.life -= powerAttack; 
                     chronoAttack = 0; 
                 }                        
