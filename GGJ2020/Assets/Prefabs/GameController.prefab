@@ -74,6 +74,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed72da6a21cba30498870b90896aab25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayLoot: 5
-  stockPart_P1: []
-  stockPart_P2: []
+  delayLoot: 1.5
+  stockPart_P1:
+  - {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb, type: 2}
+  - {fileID: 11400000, guid: 0813ec58a932dbe418eb69081e316fce, type: 2}
+  - {fileID: 11400000, guid: c42668bff4107a840998a1c4808a05a8, type: 2}
+  - {fileID: 11400000, guid: 136d6591c78a9fe4396bcdaa9332873e, type: 2}
+  stockPart_P2:
+  - {fileID: 11400000, guid: bf2fe25007ea4b94f8549109da927bdb, type: 2}
+  - {fileID: 11400000, guid: 0813ec58a932dbe418eb69081e316fce, type: 2}
+  - {fileID: 11400000, guid: c42668bff4107a840998a1c4808a05a8, type: 2}
+  - {fileID: 11400000, guid: 136d6591c78a9fe4396bcdaa9332873e, type: 2}
+  partCraft: {fileID: 70845131901474531, guid: 93e049ca89c0ea44d99244b000f7c71a, type: 3}
+  spawnPointP1: {x: -15.5, y: -2.7, z: 0}
+  spawnPointP2: {x: 2, y: -2.7, z: 0}
