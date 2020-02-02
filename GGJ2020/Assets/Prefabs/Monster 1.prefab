@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  speedMove: 2
+  speedMove: 1
   life: 10
   powerAttack: 1
   multiplierBonusSpeed: 0.2
