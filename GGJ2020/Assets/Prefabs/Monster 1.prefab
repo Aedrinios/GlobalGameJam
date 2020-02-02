@@ -673,7 +673,7 @@ MonoBehaviour:
   life: 10
   powerAttack: 1
   multiplierBonusSpeed: 0.2
-  delayAttack: 0.5
+  delayAttack: 0.2
   PickUp: {fileID: 12592355225411109, guid: 8f9ef27faf6517045ab9c9cd94344562, type: 3}
   hitParticle: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272,
     type: 3}
