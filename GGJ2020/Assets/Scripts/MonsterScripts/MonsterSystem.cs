@@ -9,6 +9,7 @@ public class MonsterSystem : MonoBehaviour
     public float speedMove = 4;
     public int life = 10;
     public int powerAttack = 1;
+    public float multiplierBonusSpeed = 0.3f;  
     public float delayAttack = 0.2f;
     public GameObject PickUp; 
     public GameObject hitParticle; 
@@ -28,7 +29,7 @@ public class MonsterSystem : MonoBehaviour
         monsterStats = GetComponent<MonsterStats>();
         monsterStats.UpgradeStats(); 
         life *= monsterStats.constitution;
-        speedMove *= 0.1f * monsterStats.agility;
+        speedMove *= multiplierBonusSpeed * monsterStats.agility;
         powerAttack *= monsterStats.strength;
         pvMax = life; 
     }

@@ -652,9 +652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1a8b4530d874249a9ea2846e8e5a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 10
-  constitution: 10
-  agility: 10
+  strength: 5
+  constitution: 5
+  agility: 5
   gestation: 0
 --- !u!114 &3687055245608256366
 MonoBehaviour:
@@ -672,6 +672,7 @@ MonoBehaviour:
   speedMove: 4
   life: 10
   powerAttack: 1
+  multiplierBonusSpeed: 0.15
   delayAttack: 0.2
   PickUp: {fileID: 12592355225411109, guid: 8f9ef27faf6517045ab9c9cd94344562, type: 3}
   hitParticle: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272,

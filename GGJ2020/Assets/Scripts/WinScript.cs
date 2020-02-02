@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class WinScript : MonoBehaviour
 {
     public Enum.Player player;
+    public float delayAfterWin = 4; 
     public Image win;
 
     public void Start()
@@ -16,11 +17,10 @@ public class WinScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("y a pas moyen");
         if (other.CompareTag("Monster") && player == other.gameObject.GetComponent<MonsterSystem>().player)
         {
             win.enabled = true;
-            Invoke("ReloadMenu", 2);
+            Invoke("ReloadMenu", delayAfterWin);
         }
     }
 
