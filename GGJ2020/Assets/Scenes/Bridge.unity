@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  isMouse: 0
+  isMouse: 1
   spriteClosed: {fileID: 21300000, guid: e431dbaa3f7c0c944bb04f79a1cfe660, type: 3}
   spriteOpen: {fileID: 21300000, guid: 77ec54be119e13c4d8d463ac642b8009, type: 3}
   charZonePlayer: {fileID: 173611394}
@@ -1406,6 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d96450f9281184dbd873ad42c29c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 1040080967}
 --- !u!1 &1040080966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -19.999939, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2093258792
