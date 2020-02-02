@@ -20,6 +20,7 @@ public class CursorController : MonoBehaviour
     private GameObject grabbedObject;
     private SpriteRenderer spriteRenderer;
     private Camera cam;
+    private AudioManager assembling;
     private int layerMaskGrab;
     private int layerMaskRelease;
     private bool hasGrabbed;
@@ -30,6 +31,7 @@ public class CursorController : MonoBehaviour
         layerMaskGrab = 1 << 12;
         layerMaskRelease = 1 << 13;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        assembling = transform.GetChild(0).GetComponent<AudioManager>();
         cam = Camera.main;
     }
 
@@ -114,6 +116,7 @@ public class CursorController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.forward, Mathf.Infinity, layerMaskRelease);
         if (hit.collider != null)
         {
+            assembling.PlaySound();
             charZonePlayer.SetPart(grabbedObject, grabbedObject.GetComponent<Rigidbody2D>());
         }
     }
