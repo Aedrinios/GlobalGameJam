@@ -33,11 +33,9 @@ public class DragObject : MonoBehaviour
         layerMask = 1 << 13;        
         mainCamera = Camera.main;
         rb2D = GetComponent<Rigidbody2D>();
-        gameObject.AddComponent<PolygonCollider2D>();
-        col = GetComponent<Collider2D>();
     }
 
-    void InitialiseDrag()
+    public void InitialiseDrag()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = partBody.spritePart;
@@ -49,7 +47,10 @@ public class DragObject : MonoBehaviour
         {
             spriteRenderer.sortingOrder = 1;
         }
-        gameObject.name = partBody.spritePart.name; 
+        gameObject.name = partBody.spritePart.name;
+
+        if(!GetComponent<Collider2D>()) gameObject.AddComponent<PolygonCollider2D>();
+        col = GetComponent<Collider2D>();
     }
 
     private void OnMouseDown()

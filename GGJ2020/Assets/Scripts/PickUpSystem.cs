@@ -34,20 +34,22 @@ public class PickUpSystem : MonoBehaviour
     public void GoToLoot()
     {
         PartSystem partSyst = GetComponent<PartSystem>();
-        float posX = transform.position.x;
-        posX = (posX / 17.8f) * 2;
-        float random = Random.Range(0f, 1f);
-        random += posX; 
-
-        if (random <= 0.5f)
+        if (partSyst.partBody != null)
         {
-            lootManager.stockPart_P1.Add(partSyst.partBody);
-        }
-        else
-        {
-            lootManager.stockPart_P2.Add(partSyst.partBody);
-        }
+            float posX = transform.position.x;
+            posX = (posX / 20f);
+            float random = 0;
+            random = Random.Range(-1f, 1f) + posX;
 
+            if (random < 0f)
+            {
+                lootManager.stockPart_P1.Add(partSyst.partBody);
+            }
+            else
+            {
+                lootManager.stockPart_P2.Add(partSyst.partBody);
+            }
+        }
         Destroy(gameObject);
     }
 }
