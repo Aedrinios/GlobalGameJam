@@ -121,5 +121,9 @@ public class CharacterZone : MonoBehaviour
         monsterPrefab.transform.GetChild(1).GetComponent<PartSystem>().partBody = null;
         monsterPrefab.transform.GetChild(2).GetComponent<PartSystem>().partBody = null;
         monsterPrefab.transform.GetChild(3).GetComponent<PartSystem>().partBody = null;
+        hasArm = false;
+        hasBody = false;
+        hasHead = false;
+        hasFeet = false;
     }
 }
