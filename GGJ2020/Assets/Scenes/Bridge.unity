@@ -1209,7 +1209,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fa42d052c46115944ba7ae080508339e, type: 3}
   - {fileID: 8300000, guid: 5593d7cc140704849912c1f82a38e2e3, type: 3}
   - {fileID: 8300000, guid: 3da1fc420145eee41b198b4f687c466a, type: 3}
-  volume: 1
+  volume: 0.4
   modifVolumeNext: 0
 --- !u!4 &1040080968
 Transform:

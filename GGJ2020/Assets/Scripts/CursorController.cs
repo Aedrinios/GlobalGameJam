@@ -74,6 +74,10 @@ public class CursorController : MonoBehaviour
                 float mouseY = Input.GetAxis("Mouse Y");
                 transform.position += new Vector3(mouseX, mouseY, 0) * speed * Time.deltaTime; ;
             }
+            if (Input.GetButtonDown("Grab2"))
+            {
+                ActivateLever();
+            }
             if (Input.GetButton("Grab2") && !hasGrabbed)
             {
                 GrabObject();
