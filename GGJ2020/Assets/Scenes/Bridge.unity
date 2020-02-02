@@ -138,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 125257989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3.77, z: 0}
-  m_LocalScale: {x: 12, y: 0.1, z: 1}
+  m_LocalScale: {x: 13, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1901353659}
   m_RootOrder: 6
@@ -405,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 458046553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.403, z: 0}
-  m_LocalScale: {x: 12, y: 0.1224, z: 1}
+  m_LocalScale: {x: 13, y: 0.1224, z: 1}
   m_Children: []
   m_Father: {fileID: 1901353659}
   m_RootOrder: 7
@@ -515,6 +515,7 @@ RectTransform:
   m_Children:
   - {fileID: 2093258791}
   - {fileID: 235491912}
+  - {fileID: 1818948579}
   m_Father: {fileID: 1254076322}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -580,8 +581,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -919410199
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!1001 &721645298
 PrefabInstance:
@@ -996,7 +997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254076322}
   m_Layer: 0
-  m_Name: UI
+  m_Name: '--- UI ---'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1015,7 +1016,7 @@ Transform:
   m_Children:
   - {fileID: 712215316}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1283620776 stripped
 MonoBehaviour:
@@ -1041,7 +1042,7 @@ GameObject:
   - component: {fileID: 1700748283}
   - component: {fileID: 1700748282}
   m_Layer: 0
-  m_Name: NecromancerWin
+  m_Name: NecromancerWinZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1095,11 +1096,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700748281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.31, y: 6.32, z: 0}
+  m_LocalPosition: {x: -19, y: 6.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1901353659}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1746660209
 GameObject:
@@ -1212,7 +1213,7 @@ GameObject:
   - component: {fileID: 1782444935}
   - component: {fileID: 1782444934}
   m_Layer: 0
-  m_Name: FrankensteinWin
+  m_Name: FrankensteinWinZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1266,11 +1267,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782444933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.25, y: 6.32, z: 0}
+  m_LocalPosition: {x: 19, y: 6.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1901353659}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1800798325
 GameObject:
@@ -1434,12 +1435,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818948576}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -22.5, z: -2025}
+  m_LocalScale: {x: 22.5, y: 22.5, z: 22.5}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 712215316}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1853211054
 GameObject:
@@ -1558,8 +1559,10 @@ Transform:
   - {fileID: 776995270}
   - {fileID: 125257991}
   - {fileID: 458046555}
+  - {fileID: 1700748284}
+  - {fileID: 1782444936}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2093258790
 GameObject:
@@ -1742,7 +1745,7 @@ Transform:
   - {fileID: 1746660212}
   - {fileID: 752507818}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577333758424601405
 GameObject:
@@ -1831,6 +1834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238503297812059253, guid: 4c700a67930a8c24f869e6a1cdd22370,
+        type: 3}
+      propertyPath: delay
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c700a67930a8c24f869e6a1cdd22370, type: 3}

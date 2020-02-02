@@ -12,7 +12,8 @@ public class RandomLoot : MonoBehaviour
 
     private void Start()
     {
-        lootManager = GetComponent<LootManager>(); 
+        lootManager = GetComponent<LootManager>();
+        FirstLoot(); 
     }
 
     private void Update()
@@ -31,5 +32,13 @@ public class RandomLoot : MonoBehaviour
         lootManager.stockPart_P1.Add(partBody[randomNumber_1]);
         int randomNumber_2 = Random.Range(0, partBody.Length);
         lootManager.stockPart_P2.Add(partBody[randomNumber_2]);
+    }
+
+    void FirstLoot()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            AddRandomLoot();
+        }
     }
 }
